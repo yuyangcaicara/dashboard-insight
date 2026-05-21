@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大盘洞察</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #f5f5f7;
+  color: #1d1d1f;
+  line-height: 1.5;
+  min-height: 100vh;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.watermark {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none; z-index: 999; overflow: hidden;
+}
+.watermark span {
+  position: absolute;
+  transform: rotate(-30deg);
+  font-size: 16px;
+  color: rgba(0,0,0,0.035);
+  white-space: nowrap;
+  font-weight: 500;
+}
+.container { max-width: 900px; margin: 0 auto; padding: 24px; }
+.header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 20px; }
+.header h1 { font-size: 22px; font-weight: 600; }
+.header-sub { font-size: 13px; color: #86868b; margin-top: 3px; }
+.header-right { text-align: right; }
+.header-time { font-size: 12px; color: #aeaeb2; }
+.header-status { font-size: 11px; margin-top: 4px; padding: 2px 8px; border-radius: 4px; display: inline-block; }
+.status-ok { background: #edf8e8; color: #389e0d; }
+.status-stale { background: #fffbe6; color: #8b6914; }
+
+.filter-bar {
+  display: flex; gap: 12px; flex-wrap: wrap; align-items: center;
+  margin-bottom: 24px; padding: 14px 18px;
+  background: #fff; border-radius: 12px; border: 1px solid rgba(0,0,0,0.06);
+}
+.filter-group { display: flex; align-items: center; gap: 6px; }
+.filter-label { font-size: 12px; color: #86868b; font-weight: 500; }
+.filter-chips { display: flex; gap: 4px; }
+.chip {
+  font-size: 13px; padding: 6px 14px; border-radius: 20px;
+  border: 1px solid rgba(0,0,0,0.08); background: #fff;
+  cursor: pointer; transition: all 0.2s; white-space: nowrap;
+}
+.chip:hover { border-color: rgba(0,122,255,0.3); }
+.chip.active { background: #e8f4fd; color: #0071e3; border-color: rgba(0,113,227,0.3); font-weight: 500; }
+.filter-select {
+  font-size: 13px; padding: 6px 12px; border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.1); background: #fff;
+  cursor: pointer; color: #1d1d1f; outline: none;
+}
+.filter-select:focus { border-color: #0071e3; }
+.filter-divider { width: 1px; height: 24px; background: rgba(0,0,0,0.08); }
+
+.summary-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-bottom: 28px; }
+@media (max-width: 600px) { .summary-grid { grid-template-columns: 1fr; } }
+.summary-card {
+  background: #fff; border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 14px; padding: 18px; text-align: center;
+  transition: transform 0.15s;
+}
+.summary-card:hover { transform: translateY(-2px); }
+.summary-label { font-size: 12px; color: #86868b; margin-bottom: 6px; }
+.summary-value { font-size: 22px; font-weight: 600; }
+.summary-hint { font-size: 11px; color: #aeaeb2; margin-top: 4px; }
+
+.section-title { font-size: 17px; font-weight: 600; margin-bottom: 4px; }
+.section-sub { font-size: 13px; color: #86868b; margin-bottom: 14px; }
+
+.data-table-wrap {
+  background: #fff; border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 14px; overflow: hidden; margin-bottom: 28px;
+}
+.data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.data-table th {
+  background: #f9f9fb; padding: 12px 16px; text-align: left;
+  font-weight: 500; color: #48484a; border-bottom: 1px solid rgba(0,0,0,0.06);
+  white-space: nowrap; position: sticky; top: 0;
+}
+.data-table td { padding: 12px 16px; border-bottom: 1px solid rgba(0,0,0,0.04); }
+.data-table tr:last-child td { border-bottom: none; }
+.data-table tr:hover td { background: #f9f9fb; }
+.range-value { font-weight: 500; color: #1d1d1f; }
+.no-data { color: #aeaeb2; }
+.industry-tag {
+  display: inline-block; font-size: 12px; padding: 2px 8px;
+  border-radius: 4px; background: #f0f0f0; font-weight: 500;
+}
+
+.hot-list {
+  list-style: none; background: #fff; border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 14px; padding: 4px 18px; margin-bottom: 28px;
+}
+.hot-item {
+  display: flex; align-items: center; padding: 12px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+.hot-item:last-child { border-bottom: none; }
+.hot-rank {
+  width: 22px; height: 22px; border-radius: 6px; background: #f5f5f5;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 600; margin-right: 12px;
+}
+.hot-rank.top { background: #fff0ec; color: #d4380d; }
+.hot-name { flex: 1; font-size: 14px; font-weight: 500; }
+.hot-tag { font-size: 12px; padding: 3px 10px; border-radius: 6px; font-weight: 500; }
+.tag-hot { background: #fff0ec; color: #d4380d; }
+.tag-up { background: #ffecd2; color: #ad4e00; }
+.tag-flat { background: #f5f5f5; color: #8c8c8c; }
+
+.note-box {
+  background: #fffbe6; border: 1px solid rgba(250,173,20,0.2);
+  border-radius: 12px; padding: 14px 18px; margin-top: 20px;
+}
+.note-text { font-size: 12px; color: #8b6914; line-height: 1.7; }
+.footer { text-align: center; margin-top: 36px; padding: 20px; font-size: 12px; color: #aeaeb2; }
+
+.empty-state { text-align: center; padding: 40px; color: #aeaeb2; }
+.loading { text-align: center; padding: 40px; color: #86868b; }
+</style>
+</head>
+<body>
+
+<div class="watermark" id="watermark"></div>
+
+<div class="container">
+
+  <div class="header">
+    <div>
+      <h1>大盘洞察</h1>
+      <p class="header-sub">医疗健康 - 专业型医院 | 数据为脱敏区间值，仅供业务参考</p>
+    </div>
+    <div class="header-right">
+      <div class="header-time" id="updateTime">-</div>
+      <span class="header-status status-ok" id="dataStatus">数据正常</span>
+    </div>
+  </div>
+
+  <!-- 筛选 -->
+  <div class="filter-bar">
+    <div class="filter-group">
+      <span class="filter-label">时间</span>
+      <div class="filter-chips" id="timeChips">
+        <span class="chip active" data-value="7">近 7 天</span>
+        <span class="chip" data-value="14">近 14 天</span>
+        <span class="chip" data-value="30">近 30 天</span>
+      </div>
+    </div>
+    <div class="filter-divider"></div>
+    <div class="filter-group">
+      <span class="filter-label">行业</span>
+      <select class="filter-select" id="filterIndustry">
+        <option value="全部">全部行业</option>
+      </select>
+    </div>
+    <div class="filter-divider"></div>
+    <div class="filter-group">
+      <span class="filter-label">优化目标</span>
+      <select class="filter-select" id="filterGoal">
+        <option value="全部">全部目标</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- 概览 -->
+  <div class="summary-grid">
+    <div class="summary-card">
+      <p class="summary-label">平均转化成本区间</p>
+      <p class="summary-value" id="avgCost">-</p>
+      <p class="summary-hint">所选条件下中位水平</p>
+    </div>
+    <div class="summary-card">
+      <p class="summary-label">平均转化率区间</p>
+      <p class="summary-value" id="avgCvr">-</p>
+      <p class="summary-hint">综合目标口径</p>
+    </div>
+    <div class="summary-card">
+      <p class="summary-label">覆盖组合数</p>
+      <p class="summary-value" id="comboCount">-</p>
+      <p class="summary-hint">行业 x 目标维度</p>
+    </div>
+  </div>
+
+  <!-- 明细 -->
+  <h2 class="section-title">各行业数据参考</h2>
+  <p class="section-sub">按 KPI 行业 + 优化目标维度聚合，展示脱敏区间值（不含 CPM / 版位）</p>
+  <div class="data-table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>KPI行业</th>
+          <th>优化目标</th>
+          <th>转化成本区间</th>
+          <th>转化率区间</th>
+        </tr>
+      </thead>
+      <tbody id="dataBody">
+        <tr><td colspan="4" class="loading">加载中...</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 热度 -->
+  <h2 class="section-title">赛道热度排行</h2>
+  <p class="section-sub">按投放活跃度排序，不含具体消耗量级</p>
+  <ul class="hot-list" id="hotList">
+    <li class="hot-item loading">加载中...</li>
+  </ul>
+
+  <div class="note-box">
+    <p class="note-text">
+      <strong>数据说明：</strong>
+      (1) 所有数值均为大盘脱敏区间值，含 ±5%~10% 随机浮动，不代表精确数据；
+      (2) 仅展示有消耗的客户主体数 ≥ 5 的聚合结果；
+      (3) 不展示 CPM、eCPM 及版位维度数据；
+      (4) 页面含水印，不支持下载导出。
+    </p>
+  </div>
+
+  <div class="footer">
+    大盘洞察 · 服务商系统 · 仅限内部使用
+  </div>
+</div>
+
+<script>
+// 全局数据缓存
+const dataCache = {};
+let currentTimeRange = '7';
+
+// 生成水印
+function createWatermark() {
+  const el = document.getElementById('watermark');
+  const text = '服务商内部';
+  let html = '';
+  for (let y = 0; y < 2000; y += 200) {
+    for (let x = -200; x < 1600; x += 350) {
+      html += `<span style="left:${x}px;top:${y}px">${text}</span>`;
+    }
+  }
+  el.innerHTML = html;
+}
+
+// 加载 JSON
+async function loadData(timeRange) {
+  if (dataCache[timeRange]) return dataCache[timeRange];
+  
+  try {
+    const resp = await fetch(`data_${timeRange}d.json?_t=${Date.now()}`);
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const data = await resp.json();
+    dataCache[timeRange] = data;
+    return data;
+  } catch (e) {
+    console.error(`加载 data_${timeRange}d.json 失败:`, e);
+    return null;
+  }
+}
+
+// 渲染
+function render(rawData, industryFilter, goalFilter) {
+  if (!rawData) {
+    document.getElementById('dataBody').innerHTML = '<tr><td colspan="4" class="empty-state">数据加载失败</td></tr>';
+    return;
+  }
+  
+  // 过滤
+  let data = rawData.data;
+  if (industryFilter && industryFilter !== '全部') {
+    data = data.filter(d => d.industry === industryFilter);
+  }
+  if (goalFilter && goalFilter !== '全部') {
+    data = data.filter(d => d.goal === goalFilter);
+  }
+  
+  // 概览
+  const costs = data.filter(d => d.cost_low > 0);
+  if (costs.length > 0) {
+    const avgLow = Math.round(costs.reduce((s,d) => s + d.cost_low, 0) / costs.length);
+    const avgHigh = Math.round(costs.reduce((s,d) => s + d.cost_high, 0) / costs.length);
+    document.getElementById('avgCost').textContent = `${avgLow}~${avgHigh} 元`;
+  } else {
+    document.getElementById('avgCost').textContent = '-';
+  }
+  
+  const cvrs = data.filter(d => d.cvr_low > 0);
+  if (cvrs.length > 0) {
+    const avgLow = (cvrs.reduce((s,d) => s + d.cvr_low, 0) / cvrs.length).toFixed(2);
+    const avgHigh = (cvrs.reduce((s,d) => s + d.cvr_high, 0) / cvrs.length).toFixed(2);
+    document.getElementById('avgCvr').textContent = `${avgLow}%~${avgHigh}%`;
+  } else {
+    document.getElementById('avgCvr').textContent = '-';
+  }
+  document.getElementById('comboCount').textContent = data.length;
+  
+  // 表格
+  const tbody = document.getElementById('dataBody');
+  if (data.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="4" class="empty-state">无匹配数据</td></tr>';
+  } else {
+    tbody.innerHTML = data.map(r => `<tr>
+      <td><span class="industry-tag">${r.industry}</span></td>
+      <td>${r.goal}</td>
+      <td class="${r.cost_display !== '-' ? 'range-value' : 'no-data'}">${r.cost_display}</td>
+      <td class="${r.cvr_display !== '-' ? 'range-value' : 'no-data'}">${r.cvr_display}</td>
+    </tr>`).join('');
+  }
+  
+  // 热度
+  const hotList = document.getElementById('hotList');
+  if (rawData.industries && rawData.industries.length > 0) {
+    hotList.innerHTML = rawData.industries.map(item => {
+      const rankClass = item.rank <= 2 ? 'top' : '';
+      let tagClass = 'tag-flat';
+      if (item.trend === '高活跃') tagClass = 'tag-hot';
+      else if (item.trend === '上升') tagClass = 'tag-up';
+      return `<li class="hot-item">
+        <span class="hot-rank ${rankClass}">${item.rank}</span>
+        <span class="hot-name">${item.name}</span>
+        <span class="hot-tag ${tagClass}">${item.trend}</span>
+      </li>`;
+    }).join('');
+  }
+  
+  // 更新时间
+  document.getElementById('updateTime').textContent = `数据更新: ${rawData.updated_at || '-'}`;
+  
+  // 数据状态
+  const statusEl = document.getElementById('dataStatus');
+  if (rawData.updated_at) {
+    const updateDate = new Date(rawData.updated_at.replace(' ', 'T'));
+    const hoursDiff = (Date.now() - updateDate.getTime()) / 3600000;
+    if (hoursDiff > 48) {
+      statusEl.textContent = '数据较旧';
+      statusEl.className = 'header-status status-stale';
+    } else {
+      statusEl.textContent = '数据正常';
+      statusEl.className = 'header-status status-ok';
+    }
+  }
+}
+
+// 填充筛选器
+function populateFilters(data) {
+  if (!data || !data.filters) return;
+  
+  const indSelect = document.getElementById('filterIndustry');
+  const goalSelect = document.getElementById('filterGoal');
+  
+  // 保留当前选择
+  const curInd = indSelect.value;
+  const curGoal = goalSelect.value;
+  
+  // 清空重建
+  indSelect.innerHTML = '<option value="全部">全部行业</option>';
+  data.filters.industries.forEach(name => {
+    const opt = document.createElement('option');
+    opt.value = name;
+    opt.textContent = name;
+    if (name === curInd) opt.selected = true;
+    indSelect.appendChild(opt);
+  });
+  
+  goalSelect.innerHTML = '<option value="全部">全部目标</option>';
+  data.filters.goals.forEach(name => {
+    const opt = document.createElement('option');
+    opt.value = name;
+    opt.textContent = name;
+    if (name === curGoal) opt.selected = true;
+    goalSelect.appendChild(opt);
+  });
+}
+
+// 刷新显示
+async function refresh() {
+  const data = await loadData(currentTimeRange);
+  if (data) {
+    populateFilters(data);
+    const industry = document.getElementById('filterIndustry').value;
+    const goal = document.getElementById('filterGoal').value;
+    render(data, industry, goal);
+  }
+}
+
+// 事件绑定
+document.addEventListener('DOMContentLoaded', () => {
+  createWatermark();
+  
+  // 时间 chip 切换
+  document.getElementById('timeChips').addEventListener('click', e => {
+    const chip = e.target.closest('.chip');
+    if (!chip) return;
+    document.querySelectorAll('#timeChips .chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    currentTimeRange = chip.dataset.value;
+    refresh();
+  });
+  
+  // 筛选变化
+  document.getElementById('filterIndustry').addEventListener('change', refresh);
+  document.getElementById('filterGoal').addEventListener('change', refresh);
+  
+  // 初始加载
+  refresh();
+});
+
+// 安全：禁止右键、保存、打印
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('keydown', e => {
+  if ((e.ctrlKey || e.metaKey) && ['s','S','p','P','c','C'].includes(e.key)) e.preventDefault();
+});
+</script>
+</body>
+</html>
