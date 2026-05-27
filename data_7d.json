@@ -3,132 +3,132 @@
     {
       "industry": "医美",
       "goal": "表单预约",
-      "cost_low": 315,
-      "cost_high": 378,
-      "cost_display": "315~378 元",
-      "cvr_low": 7.31,
-      "cvr_high": 8.66,
-      "cvr_display": "7.31%~8.66%"
+      "cost_low": 316,
+      "cost_high": 369,
+      "cost_display": "316~369 元",
+      "cvr_low": 7.56,
+      "cvr_high": 8.93,
+      "cvr_display": "7.56%~8.93%"
     },
     {
       "industry": "植发",
       "goal": "表单预约",
-      "cost_low": 331,
-      "cost_high": 378,
-      "cost_display": "331~378 元",
-      "cvr_low": 1.4,
+      "cost_low": 338,
+      "cost_high": 392,
+      "cost_display": "338~392 元",
+      "cvr_low": 1.43,
       "cvr_high": 1.67,
-      "cvr_display": "1.4%~1.67%"
+      "cvr_display": "1.43%~1.67%"
     },
     {
       "industry": "口腔",
       "goal": "综合线索收集",
-      "cost_low": 120,
-      "cost_high": 141,
-      "cost_display": "120~141 元",
-      "cvr_low": 20.06,
-      "cvr_high": 23.38,
-      "cvr_display": "20.06%~23.38%"
+      "cost_low": 119,
+      "cost_high": 135,
+      "cost_display": "119~135 元",
+      "cvr_low": 9.85,
+      "cvr_high": 11.28,
+      "cvr_display": "9.85%~11.28%"
     },
     {
       "industry": "医美",
       "goal": "在线咨询",
-      "cost_low": 166,
-      "cost_high": 200,
-      "cost_display": "166~200 元",
-      "cvr_low": 2.59,
-      "cvr_high": 3.08,
-      "cvr_display": "2.59%~3.08%"
+      "cost_low": 178,
+      "cost_high": 203,
+      "cost_display": "178~203 元",
+      "cvr_low": 2.36,
+      "cvr_high": 2.81,
+      "cvr_display": "2.36%~2.81%"
     },
     {
       "industry": "植发",
       "goal": "综合线索收集",
-      "cost_low": 650,
-      "cost_high": 742,
-      "cost_display": "650~742 元",
-      "cvr_low": 2.44,
-      "cvr_high": 2.85,
-      "cvr_display": "2.44%~2.85%"
+      "cost_low": 637,
+      "cost_high": 730,
+      "cost_display": "637~730 元",
+      "cvr_low": 2.59,
+      "cvr_high": 3.14,
+      "cvr_display": "2.59%~3.14%"
     },
     {
       "industry": "其他",
       "goal": "在线咨询",
-      "cost_low": 65,
-      "cost_high": 76,
-      "cost_display": "65~76 元",
-      "cvr_low": 3.46,
-      "cvr_high": 3.95,
-      "cvr_display": "3.46%~3.95%"
+      "cost_low": 66,
+      "cost_high": 75,
+      "cost_display": "66~75 元",
+      "cvr_low": 3.57,
+      "cvr_high": 4.0,
+      "cvr_display": "3.57%~4.0%"
     },
     {
       "industry": "口腔",
       "goal": "在线咨询",
-      "cost_low": 178,
-      "cost_high": 213,
-      "cost_display": "178~213 元",
-      "cvr_low": 3.45,
-      "cvr_high": 3.88,
-      "cvr_display": "3.45%~3.88%"
+      "cost_low": 168,
+      "cost_high": 195,
+      "cost_display": "168~195 元",
+      "cvr_low": 3.67,
+      "cvr_high": 4.27,
+      "cvr_display": "3.67%~4.27%"
     },
     {
       "industry": "体检早筛",
       "goal": "在线咨询",
-      "cost_low": 129,
-      "cost_high": 150,
-      "cost_display": "129~150 元",
-      "cvr_low": 2.56,
-      "cvr_high": 3.08,
-      "cvr_display": "2.56%~3.08%"
+      "cost_low": 152,
+      "cost_high": 172,
+      "cost_display": "152~172 元",
+      "cvr_low": 2.63,
+      "cvr_high": 3.14,
+      "cvr_display": "2.63%~3.14%"
     },
     {
       "industry": "眼科",
       "goal": "在线咨询",
-      "cost_low": 148,
-      "cost_high": 174,
-      "cost_display": "148~174 元",
-      "cvr_low": 11.3,
-      "cvr_high": 13.02,
-      "cvr_display": "11.3%~13.02%"
-    },
-    {
-      "industry": "心理咨询",
-      "goal": "表单预约",
-      "cost_low": 75,
-      "cost_high": 91,
-      "cost_display": "75~91 元",
-      "cvr_low": 3.18,
-      "cvr_high": 3.55,
-      "cvr_display": "3.18%~3.55%"
+      "cost_low": 157,
+      "cost_high": 190,
+      "cost_display": "157~190 元",
+      "cvr_low": 11.57,
+      "cvr_high": 13.81,
+      "cvr_display": "11.57%~13.81%"
     },
     {
       "industry": "口腔",
       "goal": "确认意向",
-      "cost_low": 1113,
-      "cost_high": 1244,
-      "cost_display": "1113~1244 元",
+      "cost_low": 1314,
+      "cost_high": 1546,
+      "cost_display": "1314~1546 元",
       "cvr_low": 0.52,
-      "cvr_high": 0.61,
-      "cvr_display": "0.52%~0.61%"
+      "cvr_high": 0.59,
+      "cvr_display": "0.52%~0.59%"
+    },
+    {
+      "industry": "心理咨询",
+      "goal": "表单预约",
+      "cost_low": 66,
+      "cost_high": 76,
+      "cost_display": "66~76 元",
+      "cvr_low": 3.32,
+      "cvr_high": 3.83,
+      "cvr_display": "3.32%~3.83%"
     },
     {
       "industry": "心理咨询",
       "goal": "在线咨询",
-      "cost_low": 119,
-      "cost_high": 145,
-      "cost_display": "119~145 元",
-      "cvr_low": 2.59,
-      "cvr_high": 2.99,
-      "cvr_display": "2.59%~2.99%"
+      "cost_low": 122,
+      "cost_high": 136,
+      "cost_display": "122~136 元",
+      "cvr_low": 2.64,
+      "cvr_high": 2.96,
+      "cvr_display": "2.64%~2.96%"
     },
     {
       "industry": "基因检测",
       "goal": "在线咨询",
-      "cost_low": 82,
-      "cost_high": 97,
-      "cost_display": "82~97 元",
-      "cvr_low": 3.37,
-      "cvr_high": 3.94,
-      "cvr_display": "3.37%~3.94%"
+      "cost_low": 84,
+      "cost_high": 98,
+      "cost_display": "84~98 元",
+      "cvr_low": 3.57,
+      "cvr_high": 4.19,
+      "cvr_display": "3.57%~4.19%"
     },
     {
       "industry": "基因检测",
@@ -139,96 +139,116 @@
       "cvr_low": 0,
       "cvr_high": 0,
       "cvr_display": "-"
+    },
+    {
+      "industry": "体检早筛",
+      "goal": "综合线索收集",
+      "cost_low": 33,
+      "cost_high": 38,
+      "cost_display": "33~38 元",
+      "cvr_low": 3.31,
+      "cvr_high": 3.94,
+      "cvr_display": "3.31%~3.94%"
     },
     {
       "industry": "其他",
       "goal": "表单预约",
       "cost_low": 140,
-      "cost_high": 165,
-      "cost_display": "140~165 元",
-      "cvr_low": 1.31,
-      "cvr_high": 1.54,
-      "cvr_display": "1.31%~1.54%"
+      "cost_high": 160,
+      "cost_display": "140~160 元",
+      "cvr_low": 1.29,
+      "cvr_high": 1.51,
+      "cvr_display": "1.29%~1.51%"
     },
     {
       "industry": "医美平台",
       "goal": "确认意向",
-      "cost_low": 292,
-      "cost_high": 335,
-      "cost_display": "292~335 元",
-      "cvr_low": 2.88,
-      "cvr_high": 3.41,
-      "cvr_display": "2.88%~3.41%"
+      "cost_low": 308,
+      "cost_high": 367,
+      "cost_display": "308~367 元",
+      "cvr_low": 2.77,
+      "cvr_high": 3.13,
+      "cvr_display": "2.77%~3.13%"
     },
     {
       "industry": "植发",
       "goal": "加企业微信客服",
-      "cost_low": 340,
-      "cost_high": 399,
-      "cost_display": "340~399 元",
-      "cvr_low": 1.25,
-      "cvr_high": 1.43,
-      "cvr_display": "1.25%~1.43%"
+      "cost_low": 349,
+      "cost_high": 421,
+      "cost_display": "349~421 元",
+      "cvr_low": 1.21,
+      "cvr_high": 1.36,
+      "cvr_display": "1.21%~1.36%"
     },
     {
       "industry": "口腔",
       "goal": "表单预约",
-      "cost_low": 333,
-      "cost_high": 382,
-      "cost_display": "333~382 元",
-      "cvr_low": 1.84,
-      "cvr_high": 2.08,
-      "cvr_display": "1.84%~2.08%"
-    },
-    {
-      "industry": "体检早筛",
-      "goal": "综合线索收集",
-      "cost_low": 27,
-      "cost_high": 31,
-      "cost_display": "27~31 元",
-      "cvr_low": 3.31,
-      "cvr_high": 3.91,
-      "cvr_display": "3.31%~3.91%"
+      "cost_low": 320,
+      "cost_high": 363,
+      "cost_display": "320~363 元",
+      "cvr_low": 1.85,
+      "cvr_high": 2.12,
+      "cvr_display": "1.85%~2.12%"
     },
     {
       "industry": "植发",
       "goal": "确认意向",
-      "cost_low": 4365,
-      "cost_high": 5093,
-      "cost_display": "4365~5093 元",
-      "cvr_low": 0.59,
-      "cvr_high": 0.67,
-      "cvr_display": "0.59%~0.67%"
+      "cost_low": 4389,
+      "cost_high": 4964,
+      "cost_display": "4389~4964 元",
+      "cvr_low": 0.61,
+      "cvr_high": 0.7,
+      "cvr_display": "0.61%~0.7%"
+    },
+    {
+      "industry": "心理咨询",
+      "goal": "综合线索收集",
+      "cost_low": 0,
+      "cost_high": 0,
+      "cost_display": "-",
+      "cvr_low": 0,
+      "cvr_high": 0,
+      "cvr_display": "-"
     },
     {
       "industry": "孕产服务",
       "goal": "在线咨询",
-      "cost_low": 132,
-      "cost_high": 152,
-      "cost_display": "132~152 元",
-      "cvr_low": 4.51,
-      "cvr_high": 5.34,
-      "cvr_display": "4.51%~5.34%"
-    },
-    {
-      "industry": "植发",
-      "goal": "在线咨询",
-      "cost_low": 445,
-      "cost_high": 518,
-      "cost_display": "445~518 元",
-      "cvr_low": 1.42,
-      "cvr_high": 1.64,
-      "cvr_display": "1.42%~1.64%"
+      "cost_low": 131,
+      "cost_high": 149,
+      "cost_display": "131~149 元",
+      "cvr_low": 4.02,
+      "cvr_high": 4.67,
+      "cvr_display": "4.02%~4.67%"
     },
     {
       "industry": "医美平台",
       "goal": "表单预约",
-      "cost_low": 185,
-      "cost_high": 219,
-      "cost_display": "185~219 元",
-      "cvr_low": 5.12,
-      "cvr_high": 6.15,
-      "cvr_display": "5.12%~6.15%"
+      "cost_low": 189,
+      "cost_high": 221,
+      "cost_display": "189~221 元",
+      "cvr_low": 5.25,
+      "cvr_high": 6.1,
+      "cvr_display": "5.25%~6.1%"
+    },
+    {
+      "industry": "专科医院",
+      "goal": "确认意向",
+      "cost_low": 0,
+      "cost_high": 0,
+      "cost_display": "-",
+      "cvr_low": 0,
+      "cvr_high": 0,
+      "cvr_display": "-"
+    },
+    {
+      "industry": "植发",
+      "goal": "在线咨询",
+      "cost_low": 462,
+      "cost_high": 521,
+      "cost_display": "462~521 元",
+      "cvr_low": 1.35,
+      "cvr_high": 1.56,
+      "cvr_display": "1.35%~1.56%"
     },
     {
       "industry": "其他",
@@ -241,24 +261,14 @@
       "cvr_display": "-"
     },
     {
-      "industry": "心理咨询",
-      "goal": "关注后发消息",
-      "cost_low": 137,
-      "cost_high": 154,
-      "cost_display": "137~154 元",
-      "cvr_low": 1.44,
-      "cvr_high": 1.63,
-      "cvr_display": "1.44%~1.63%"
-    },
-    {
       "industry": "医美平台",
       "goal": "综合线索收集",
-      "cost_low": 281,
-      "cost_high": 328,
-      "cost_display": "281~328 元",
-      "cvr_low": 1.4,
-      "cvr_high": 1.64,
-      "cvr_display": "1.4%~1.64%"
+      "cost_low": 262,
+      "cost_high": 300,
+      "cost_display": "262~300 元",
+      "cvr_low": 1.45,
+      "cvr_high": 1.66,
+      "cvr_display": "1.45%~1.66%"
     },
     {
       "industry": "口腔",
@@ -266,9 +276,9 @@
       "cost_low": 2,
       "cost_high": 3,
       "cost_display": "2~3 元",
-      "cvr_low": 16.26,
-      "cvr_high": 19.31,
-      "cvr_display": "16.26%~19.31%"
+      "cvr_low": 16.19,
+      "cvr_high": 18.74,
+      "cvr_display": "16.19%~18.74%"
     },
     {
       "industry": "孕产服务",
@@ -276,19 +286,19 @@
       "cost_low": 1,
       "cost_high": 1,
       "cost_display": "1~1 元",
-      "cvr_low": 28.31,
-      "cvr_high": 32.57,
-      "cvr_display": "28.31%~32.57%"
+      "cvr_low": 28.29,
+      "cvr_high": 32.7,
+      "cvr_display": "28.29%~32.7%"
     },
     {
       "industry": "其他",
       "goal": "综合线索收集",
-      "cost_low": 102,
-      "cost_high": 124,
-      "cost_display": "102~124 元",
-      "cvr_low": 2.77,
-      "cvr_high": 3.2,
-      "cvr_display": "2.77%~3.2%"
+      "cost_low": 114,
+      "cost_high": 130,
+      "cost_display": "114~130 元",
+      "cvr_low": 2.45,
+      "cvr_high": 2.79,
+      "cvr_display": "2.45%~2.79%"
     },
     {
       "industry": "眼科",
@@ -296,13 +306,23 @@
       "cost_low": 4,
       "cost_high": 5,
       "cost_display": "4~5 元",
-      "cvr_low": 17.94,
-      "cvr_high": 20.0,
-      "cvr_display": "17.94%~20.0%"
+      "cvr_low": 18.09,
+      "cvr_high": 20.63,
+      "cvr_display": "18.09%~20.63%"
+    },
+    {
+      "industry": "医美",
+      "goal": "综合线索收集",
+      "cost_low": 272,
+      "cost_high": 310,
+      "cost_display": "272~310 元",
+      "cvr_low": 0.88,
+      "cvr_high": 1.01,
+      "cvr_display": "0.88%~1.01%"
     },
     {
       "industry": "心理咨询",
-      "goal": "综合线索收集",
+      "goal": "关注后发消息",
       "cost_low": 0,
       "cost_high": 0,
       "cost_display": "-",
@@ -312,33 +332,23 @@
     },
     {
       "industry": "医美",
-      "goal": "综合线索收集",
-      "cost_low": 270,
-      "cost_high": 310,
-      "cost_display": "270~310 元",
-      "cvr_low": 1.01,
-      "cvr_high": 1.18,
-      "cvr_display": "1.01%~1.18%"
+      "goal": "关注",
+      "cost_low": 16,
+      "cost_high": 18,
+      "cost_display": "16~18 元",
+      "cvr_low": 9.32,
+      "cvr_high": 11.25,
+      "cvr_display": "9.32%~11.25%"
     },
     {
       "industry": "医美",
       "goal": "确认意向",
-      "cost_low": 928,
-      "cost_high": 1109,
-      "cost_display": "928~1109 元",
-      "cvr_low": 0.62,
-      "cvr_high": 0.74,
-      "cvr_display": "0.62%~0.74%"
-    },
-    {
-      "industry": "医美",
-      "goal": "关注",
-      "cost_low": 18,
-      "cost_high": 22,
-      "cost_display": "18~22 元",
-      "cvr_low": 9.16,
-      "cvr_high": 11.04,
-      "cvr_display": "9.16%~11.04%"
+      "cost_low": 974,
+      "cost_high": 1130,
+      "cost_display": "974~1130 元",
+      "cvr_low": 0.6,
+      "cvr_high": 0.69,
+      "cvr_display": "0.6%~0.69%"
     },
     {
       "industry": "植发",
@@ -346,9 +356,19 @@
       "cost_low": 0,
       "cost_high": 0,
       "cost_display": "0~0 元",
-      "cvr_low": 34.89,
-      "cvr_high": 40.58,
-      "cvr_display": "34.89%~40.58%"
+      "cvr_low": 34.32,
+      "cvr_high": 40.03,
+      "cvr_display": "34.32%~40.03%"
+    },
+    {
+      "industry": "医美",
+      "goal": "加企业微信客服",
+      "cost_low": 213,
+      "cost_high": 247,
+      "cost_display": "213~247 元",
+      "cvr_low": 2.6,
+      "cvr_high": 3.02,
+      "cvr_display": "2.6%~3.02%"
     },
     {
       "industry": "心理咨询",
@@ -361,125 +381,105 @@
       "cvr_display": "-"
     },
     {
-      "industry": "医美",
-      "goal": "加企业微信客服",
-      "cost_low": 273,
-      "cost_high": 312,
-      "cost_display": "273~312 元",
-      "cvr_low": 2.03,
-      "cvr_high": 2.42,
-      "cvr_display": "2.03%~2.42%"
-    },
-    {
       "industry": "眼科",
       "goal": "表单预约",
-      "cost_low": 233,
-      "cost_high": 280,
-      "cost_display": "233~280 元",
-      "cvr_low": 2.3,
-      "cvr_high": 2.62,
-      "cvr_display": "2.3%~2.62%"
+      "cost_low": 275,
+      "cost_high": 322,
+      "cost_display": "275~322 元",
+      "cvr_low": 1.92,
+      "cvr_high": 2.24,
+      "cvr_display": "1.92%~2.24%"
     },
     {
       "industry": "孕产服务",
       "goal": "确认意向",
-      "cost_low": 759,
-      "cost_high": 847,
-      "cost_display": "759~847 元",
-      "cvr_low": 0.82,
-      "cvr_high": 0.96,
-      "cvr_display": "0.82%~0.96%"
+      "cost_low": 678,
+      "cost_high": 794,
+      "cost_display": "678~794 元",
+      "cvr_low": 0.86,
+      "cvr_high": 0.97,
+      "cvr_display": "0.86%~0.97%"
     },
     {
       "industry": "专科医院",
       "goal": "表单预约",
-      "cost_low": 203,
-      "cost_high": 239,
-      "cost_display": "203~239 元",
-      "cvr_low": 0.94,
-      "cvr_high": 1.05,
-      "cvr_display": "0.94%~1.05%"
+      "cost_low": 172,
+      "cost_high": 200,
+      "cost_display": "172~200 元",
+      "cvr_low": 1.42,
+      "cvr_high": 1.66,
+      "cvr_display": "1.42%~1.66%"
     },
     {
       "industry": "眼科",
       "goal": "确认意向",
       "cost_low": 447,
-      "cost_high": 509,
-      "cost_display": "447~509 元",
-      "cvr_low": 0.61,
-      "cvr_high": 0.69,
-      "cvr_display": "0.61%~0.69%"
+      "cost_high": 520,
+      "cost_display": "447~520 元",
+      "cvr_low": 0.6,
+      "cvr_high": 0.67,
+      "cvr_display": "0.6%~0.67%"
     },
     {
       "industry": "专科医院",
       "goal": "综合线索收集",
-      "cost_low": 429,
-      "cost_high": 498,
-      "cost_display": "429~498 元",
-      "cvr_low": 0.91,
+      "cost_low": 412,
+      "cost_high": 497,
+      "cost_display": "412~497 元",
+      "cvr_low": 0.92,
       "cvr_high": 1.06,
-      "cvr_display": "0.91%~1.06%"
+      "cvr_display": "0.92%~1.06%"
     },
     {
       "industry": "孕产服务",
       "goal": "表单预约",
-      "cost_low": 155,
-      "cost_high": 178,
-      "cost_display": "155~178 元",
-      "cvr_low": 1.18,
-      "cvr_high": 1.34,
-      "cvr_display": "1.18%~1.34%"
+      "cost_low": 163,
+      "cost_high": 190,
+      "cost_display": "163~190 元",
+      "cvr_low": 1.09,
+      "cvr_high": 1.28,
+      "cvr_display": "1.09%~1.28%"
     },
     {
       "industry": "体检早筛",
       "goal": "表单预约",
-      "cost_low": 151,
-      "cost_high": 169,
-      "cost_display": "151~169 元",
-      "cvr_low": 1.31,
-      "cvr_high": 1.59,
-      "cvr_display": "1.31%~1.59%"
+      "cost_low": 142,
+      "cost_high": 170,
+      "cost_display": "142~170 元",
+      "cvr_low": 1.35,
+      "cvr_high": 1.63,
+      "cvr_display": "1.35%~1.63%"
     },
     {
       "industry": "眼科",
       "goal": "综合线索收集",
-      "cost_low": 139,
-      "cost_high": 165,
-      "cost_display": "139~165 元",
-      "cvr_low": 1.81,
-      "cvr_high": 2.08,
-      "cvr_display": "1.81%~2.08%"
+      "cost_low": 129,
+      "cost_high": 153,
+      "cost_display": "129~153 元",
+      "cvr_low": 1.75,
+      "cvr_high": 1.98,
+      "cvr_display": "1.75%~1.98%"
     },
     {
       "industry": "孕产服务",
       "goal": "综合线索收集",
-      "cost_low": 361,
-      "cost_high": 424,
-      "cost_display": "361~424 元",
-      "cvr_low": 0.86,
-      "cvr_high": 1.02,
-      "cvr_display": "0.86%~1.02%"
-    },
-    {
-      "industry": "口腔",
-      "goal": "加企业微信客服",
-      "cost_low": 0,
-      "cost_high": 0,
-      "cost_display": "-",
-      "cvr_low": 0,
-      "cvr_high": 0,
-      "cvr_display": "-"
+      "cost_low": 365,
+      "cost_high": 427,
+      "cost_display": "365~427 元",
+      "cvr_low": 0.9,
+      "cvr_high": 1.03,
+      "cvr_display": "0.9%~1.03%"
     }
   ],
   "industries": [
     {
       "rank": 1,
-      "name": "医美",
+      "name": "植发",
       "trend": "高活跃"
     },
     {
       "rank": 2,
-      "name": "植发",
+      "name": "医美",
       "trend": "高活跃"
     },
     {
@@ -553,6 +553,6 @@
     ]
   },
   "time_range": "7",
-  "updated_at": "2026-05-26 10:26",
+  "updated_at": "2026-05-27 11:45",
   "note": "数据为脱敏区间值（±5%~10%浮动），仅供参考"
 }
